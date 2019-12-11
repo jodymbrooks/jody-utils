@@ -2,6 +2,8 @@
 	"name": "jody-utils",
 	"displayName": "Jody Utils",
 	"description": "Various stuff Jody needs.",
+	"publisher": "jodymbrooks",
+	"repository": {"url": "https://github.com/jodymbrooks/jody-utils.git"},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -10,14 +12,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.prepMergeRequest"
+		"onCommand:extension.prepMergeRequest",
+		"onCommand:extension.notify"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "extension.prepMergeRequest",
-				"title": "Jody: Prep Merge Request"
+				"title": "Prep Merge Request",
+				"category": "Jody Utils"
+			},
+			{
+				"command": "extension.notify",
+				"title": "Notify",
+				"category": "Jody Utils"
 			}
 		]
 	},
